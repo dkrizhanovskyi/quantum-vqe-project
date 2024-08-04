@@ -1,32 +1,64 @@
-# Quantum VQE Project
+# Quantum VQE Optimization Project
 
-This project demonstrates the implementation of a Variational Quantum Eigensolver (VQE) using PennyLane.
+## Overview
+This project focuses on optimizing Variational Quantum Eigensolver (VQE) circuits using gradient descent and parallel processing. It includes hyperparameter optimization through random search to identify the best parameters for the VQE circuits.
 
-## Structure
+## Best Parameters
+The best parameters identified through random search are:
+- **Steps**: 200
+- **Stepsize**: 0.1
+- **Circuit**: default
 
-- `src/`: Source code for the project
-- `results/`: Output results
-- `notebooks/`: Jupyter Notebooks for exploratory analysis
-- `README.md`: Project description and instructions
-- `requirements.txt`: List of dependencies
+## Results
+The optimization process converged successfully, achieving a minimum cost value. The final report and graphs are saved in the `results` directory.
 
-## Setup
+## Graphs and Visualizations
+- ![Cost History Plot](results/Figure_1.png)
+- ![Cost Distribution Histogram](results/Histogram.png)
+- ![Moving Average Plot](results/Moving_Average.png)
+- ![Boxplot of Cost](results/Boxplot.png)
+- ![Density Plot of Cost](results/Density_Plot.png)
 
-1. Clone the repository
-2. Install the dependencies
+## Process Description
+1. **Parameter Initialization**: The initial parameters were randomly initialized.
+2. **Optimization**: The optimization process was performed using a gradient descent optimizer.
+3. **Parallel Processing**: The optimization and analysis were done in parallel to improve performance.
+4. **Analysis**: The results were analyzed using various statistical metrics and visualizations.
+5. **Hyperparameter Search**: A random search was conducted to find the best hyperparameters.
+
+## How to Run
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/dkrizhanovskyi/quantum-vqe-project.git
+    cd quantum-vqe-project
+    ```
+
+2. **Install dependencies**:
     ```bash
     pip install -r requirements.txt
     ```
-3. Run the main script
+
+3. **Run the random search for hyperparameter optimization**:
     ```bash
-    python src/main.py
+    python random_search.py --config config.yaml
     ```
 
-## Project Description
+4. **Run the optimization with the best parameters**:
+    ```bash
+    python run_optimization.py --config config.yaml
+    ```
 
-The project includes:
-- Quantum circuit design for VQE
-- Optimization of the quantum circuit
-- Analysis and visualization of results
+## Configuration
+The `config.yaml` file contains the configuration parameters for the optimization process. Update the parameters as needed.
 
-For more details, refer to the `notebooks/exploration.ipynb` file.
+### Example `config.yaml`
+```yaml
+optimization:
+  steps: 200  # Best number of steps
+  stepsize: 0.1  # Best step size
+  circuit: default  # Best circuit type
+  save_path: results/state.json
+  load_path: ''
+results_dir: results
+parallel_processes: 4  # Number of parallel processes
+ ```
