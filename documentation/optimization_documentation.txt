@@ -1,0 +1,32 @@
+Optimization Documentation
+=========================
+
+Best Parameters:
+- Steps: 200
+- Stepsize: 0.1
+- Circuit: default
+
+Results:
+---------
+The optimization process converged successfully, achieving a minimum cost value.
+The final report and graphs are saved in the 'results' directory.
+
+Graphs and Visualizations:
+--------------------------
+- [Cost History Plot](c:\Users\danii\results\Figure_1.png)
+- [Cost Distribution Histogram](c:\Users\danii\results\Histogram.png)
+- [Moving Average Plot](c:\Users\danii\results\Moving_Average.png)
+- [Boxplot of Cost](c:\Users\danii\results\Boxplot.png)
+- [Density Plot of Cost](c:\Users\danii\results\Density_Plot.png)
+
+Process Description:
+-------------------
+1. **Parameter Initialization**: The initial parameters were randomly initialized.
+2. **Optimization**: The optimization process was performed using a gradient descent optimizer.
+3. **Parallel Processing**: The optimization and analysis were done in parallel to improve performance.
+4. **Analysis**: The results were analyzed using various statistical metrics and visualizations.
+5. **Hyperparameter Search**: A random search was conducted to find the best hyperparameters.
+
+Conclusion:
+-----------
+The optimization process was successful, and the best hyperparameters were identified. Future work can involve further experimentation with different parameter settings or extending the analysis with additional metrics and visualizations.
