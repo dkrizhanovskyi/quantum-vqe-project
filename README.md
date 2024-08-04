@@ -4,7 +4,6 @@ This project demonstrates the implementation of a Variational Quantum Eigensolve
 
 ## Structure
 
-- `data/`: Contains input data files
 - `src/`: Source code for the project
 - `results/`: Output results
 - `notebooks/`: Jupyter Notebooks for exploratory analysis
