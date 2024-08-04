@@ -1,6 +1,8 @@
 optimization:
-  steps: 99
-  stepsize: 0.9
+  steps: 200
+  stepsize: 0.1
   circuit: default
   save_path: results/state.json
   load_path: ''
+results_dir: results
+parallel_processes: 4 
