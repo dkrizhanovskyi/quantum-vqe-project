@@ -1,0 +1,6 @@
+optimization:
+  steps: 99
+  stepsize: 0.9
+  circuit: default
+  save_path: results/state.json
+  load_path: ''
